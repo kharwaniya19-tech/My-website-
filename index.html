@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Form</title>
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial;
+    }
+
+    .box {
+      background-color: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    button {
+      width: 95%;
+      padding: 10px;
+      font-size: 18px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+
+  <script>
+    function showData() {
+      var name = document.getElementById("name").value;
+      var number = document.getElementById("number").value;
+
+      document.getElementById("result").innerHTML =
+        "Naam: " + name + "<br>Number: " + number;
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>My Form</h2>
+
+    <input type="text" id="name" placeholder="Naam likho">
+
+    <input type="number" id="number" placeholder="Number likho">
+
+    <button onclick="showData()">Submit</button>
+
+    <p id="result"></p>
+  </div>
+
+</body>
+</html>
